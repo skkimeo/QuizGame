@@ -45,6 +45,10 @@ class SFSymbolFlashCardGame: ObservableObject {
         model.choiceIsCorrect
     }
     
+    var finalCardIndex: Int {
+        model.cards.count
+    }
+    
     // MARK: - Intention(s)
 
     func choose(_ choice: String) {

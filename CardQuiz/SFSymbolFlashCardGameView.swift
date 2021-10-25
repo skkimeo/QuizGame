@@ -14,7 +14,7 @@ struct SFSymbolFlashCardGameView: View {
         NavigationView {
             VStack {
                 // 아직 퀴즈가 남아있는 경우
-                if game.currentCardIndex < game.cards.count {
+                if game.currentCardIndex < game.finalCardIndex {
                     resultBody
                     cardBody
                     nextButton
