@@ -1,25 +1,22 @@
 //
-//  CardQuizGameView.swift
-//  CardQuiz
+//  SFSymbolFlashCardGameView.swift
+//  SFSymbolFlashCardGameView
 //
 //  Created by sun on 2021/10/25.
 //
 
 import SwiftUI
 
-struct CardQuizGameView: View {
-    @ObservedObject var game: SymbolQuizViewModel
+struct SFSymbolFlashCardGameView: View {
+    @ObservedObject var game: SFSymbolFlashCardGame
     
     var body: some View {
         NavigationView {
             VStack {
                 // 아직 퀴즈가 남아있는 경우
-                if game.currentQuestionIndex < game.questions.count {
-//                    Spacer()
+                if game.currentCardIndex < game.cards.count {
                     resultBody
-//                    Spacer()
-                    questionBody
-//                    Spacer()
+                    cardBody
                     nextButton
                     Spacer()
                 } else {
@@ -44,40 +41,33 @@ struct CardQuizGameView: View {
         }
     }
     
-    var nextButton: some View {
-        Button("Next Question") {
-            game.nextQuestion()
-        }
-        .padding(.bottom)
-    }
-    
-    var questionBody: some View {
+    var cardBody: some View {
         VStack {
             // typealias?
-            let currentQuestion = game.questions[game.currentQuestionIndex]
+            let currentCard = game.cards[game.currentCardIndex]
             Spacer()
             // 문제 띄워주는 친구
-            Image(systemName: currentQuestion.answer).scaleEffect(4)
+            Image(systemName: currentCard.answer).scaleEffect(4)
             Spacer()
-            
             HStack {
                 Spacer()
-                Button(currentQuestion.answerChoices[0]) {
-                    game.choose(currentQuestion.answerChoices[0])
+                ForEach(0..<3) { index in
+                    Button(currentCard.answerChoices[index]) {
+                        game.choose(currentCard.answerChoices[index])
+                    }
+                    Spacer()
                 }
-                Spacer()
-                Button(currentQuestion.answerChoices[1]) {
-                    game.choose(currentQuestion.answerChoices[1])
-                }
-                Spacer()
-                Button(currentQuestion.answerChoices[2]) {
-                    game.choose(currentQuestion.answerChoices[2])
-                }
-                Spacer()
             }
             Spacer()
         }
         .padding(.horizontal)
+    }
+    
+    var nextButton: some View {
+        Button("Next") {
+            game.nextCard()
+        }
+        .padding(.bottom)
     }
 }
 
@@ -85,9 +75,21 @@ struct CardQuizGameView: View {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 struct CardQuizGameView_Previews: PreviewProvider {
     static var previews: some View {
-        CardQuizGameView(game: SymbolQuizViewModel())
+        SFSymbolFlashCardGameView(game: SFSymbolFlashCardGame())
     }
 }
 

@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4C036FF272690F90090ED13 /* CardQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C036FE272690F90090ED13 /* CardQuizApp.swift */; };
+		A4C036FF272690F90090ED13 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C036FE272690F90090ED13 /* FlashCard.swift */; };
 		A4C03701272690F90090ED13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C03700272690F90090ED13 /* ContentView.swift */; };
 		A4C03703272690FA0090ED13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C03702272690FA0090ED13 /* Assets.xcassets */; };
 		A4C03706272690FA0090ED13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C03705272690FA0090ED13 /* Preview Assets.xcassets */; };
-		A4C0370D272695DF0090ED13 /* QuizGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C0370C272695DF0090ED13 /* QuizGameModel.swift */; };
-		A4C0370F272698EA0090ED13 /* CardQuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C0370E272698EA0090ED13 /* CardQuizViewModel.swift */; };
-		A4C0371127269CBD0090ED13 /* CardQuizGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C0371027269CBD0090ED13 /* CardQuizGameView.swift */; };
+		A4C0370D272695DF0090ED13 /* FlashCardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C0370C272695DF0090ED13 /* FlashCardGame.swift */; };
+		A4C0370F272698EA0090ED13 /* SFSymbolFlashCardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C0370E272698EA0090ED13 /* SFSymbolFlashCardGame.swift */; };
+		A4C0371127269CBD0090ED13 /* SFSymbolFlashCardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C0371027269CBD0090ED13 /* SFSymbolFlashCardGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A4C036FB272690F90090ED13 /* CardQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4C036FE272690F90090ED13 /* CardQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardQuizApp.swift; sourceTree = "<group>"; };
+		A4C036FE272690F90090ED13 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
 		A4C03700272690F90090ED13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A4C03702272690FA0090ED13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4C03705272690FA0090ED13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A4C0370C272695DF0090ED13 /* QuizGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameModel.swift; sourceTree = "<group>"; };
-		A4C0370E272698EA0090ED13 /* CardQuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardQuizViewModel.swift; sourceTree = "<group>"; };
-		A4C0371027269CBD0090ED13 /* CardQuizGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardQuizGameView.swift; sourceTree = "<group>"; };
+		A4C0370C272695DF0090ED13 /* FlashCardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardGame.swift; sourceTree = "<group>"; };
+		A4C0370E272698EA0090ED13 /* SFSymbolFlashCardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolFlashCardGame.swift; sourceTree = "<group>"; };
+		A4C0371027269CBD0090ED13 /* SFSymbolFlashCardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolFlashCardGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +57,13 @@
 		A4C036FD272690F90090ED13 /* CardQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				A4C036FE272690F90090ED13 /* CardQuizApp.swift */,
+				A4C036FE272690F90090ED13 /* FlashCard.swift */,
 				A4C03700272690F90090ED13 /* ContentView.swift */,
 				A4C03702272690FA0090ED13 /* Assets.xcassets */,
 				A4C03704272690FA0090ED13 /* Preview Content */,
-				A4C0370C272695DF0090ED13 /* QuizGameModel.swift */,
-				A4C0370E272698EA0090ED13 /* CardQuizViewModel.swift */,
-				A4C0371027269CBD0090ED13 /* CardQuizGameView.swift */,
+				A4C0370C272695DF0090ED13 /* FlashCardGame.swift */,
+				A4C0370E272698EA0090ED13 /* SFSymbolFlashCardGame.swift */,
+				A4C0371027269CBD0090ED13 /* SFSymbolFlashCardGameView.swift */,
 			);
 			path = CardQuiz;
 			sourceTree = "<group>";
@@ -147,10 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C03701272690F90090ED13 /* ContentView.swift in Sources */,
-				A4C0370F272698EA0090ED13 /* CardQuizViewModel.swift in Sources */,
-				A4C0370D272695DF0090ED13 /* QuizGameModel.swift in Sources */,
-				A4C0371127269CBD0090ED13 /* CardQuizGameView.swift in Sources */,
-				A4C036FF272690F90090ED13 /* CardQuizApp.swift in Sources */,
+				A4C0370F272698EA0090ED13 /* SFSymbolFlashCardGame.swift in Sources */,
+				A4C0370D272695DF0090ED13 /* FlashCardGame.swift in Sources */,
+				A4C0371127269CBD0090ED13 /* SFSymbolFlashCardGameView.swift in Sources */,
+				A4C036FF272690F90090ED13 /* FlashCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
