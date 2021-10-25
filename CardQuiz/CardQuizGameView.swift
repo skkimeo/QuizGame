@@ -15,24 +15,32 @@ struct CardQuizGameView: View {
             VStack {
                 // 아직 퀴즈가 남아있는 경우
                 if game.currentQuestionIndex < game.questions.count {
-                    Spacer()
-                    if let correct = game.choiceIsCorrect {
-                        if correct {
-                            Text("Correct!").font(.largeTitle).foregroundColor(.green)
-                        } else {
-                            Text("Wrong!").font(.largeTitle).foregroundColor(.red)
-                        }
-                    }
+//                    Spacer()
+                    resultBody
+//                    Spacer()
                     questionBody
+//                    Spacer()
                     nextButton
+                    Spacer()
                 } else {
-                    Text("game over").font(.largeTitle).foregroundColor(.green)
+                    Text("game over").foregroundColor(.green)
                 }
-                
-                
-                
             }
-            .navigationBarTitle("Theme Game!")
+            .font(.largeTitle)
+            .padding(.vertical)
+            .navigationBarTitle("Vehicle Game!")
+        }
+    }
+    
+    @ViewBuilder var resultBody: some View {
+        if let correct = game.choiceIsCorrect {
+            if correct {
+                Text("Correct!").foregroundColor(.green)
+            } else {
+                Text("Wrong!").foregroundColor(.red)
+            }
+        } else {
+            Text("What's This?").foregroundColor(.black).bold()
         }
     }
     
@@ -40,6 +48,7 @@ struct CardQuizGameView: View {
         Button("Next Question") {
             game.nextQuestion()
         }
+        .padding(.bottom)
     }
     
     var questionBody: some View {
@@ -47,8 +56,10 @@ struct CardQuizGameView: View {
             // typealias?
             let currentQuestion = game.questions[game.currentQuestionIndex]
             Spacer()
-            Image(systemName: currentQuestion.answer).scaleEffect(5)
+            // 문제 띄워주는 친구
+            Image(systemName: currentQuestion.answer).scaleEffect(4)
             Spacer()
+            
             HStack {
                 Spacer()
                 Button(currentQuestion.answerChoices[0]) {
@@ -66,7 +77,7 @@ struct CardQuizGameView: View {
             }
             Spacer()
         }
-        
+        .padding(.horizontal)
     }
 }
 

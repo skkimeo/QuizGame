@@ -24,9 +24,12 @@ struct QuizGameModel {
     
     mutating func nextQuestion() {
         currentQuestionIndex += 1
+//        print(choiceIsCorrect)
         choiceIsCorrect = nil
+//        print(choiceIsCorrect)
     }
     
+    //
     struct Question {
         var answer: String
         var answerChoices: [String]
